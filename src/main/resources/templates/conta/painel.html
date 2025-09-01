@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel da Conta</title>
+</head>
+<body>
+  <h1>Painel da conta</h1>
+  <p>ID: <span th:text="${conta.id}"></span></p>
+  <p>Titular: <span th:text="${conta.titular}"></span></p>
+  <p>Saldo: <span th:text="${conta.saldo}"></span></p>
+
+  <h2>Operações</h2>
+  <form th:action="@{'/conta/' + ${conta.id} + '/creditar'}" method="post">
+    <input name="valor" placeholder="Valor para creditar" />
+    <button type="submit">Creditar</button>
+  </form>
+
+  <form th:action="@{'/conta/' + ${conta.id} + '/debitar'}" method="post">
+    <input name="valor" placeholder="Valor para debitar" />
+    <button type="submit">Debitar</button>
+  </form>
+
+  <h3>Transferir</h3>
+  <form th:action="@{'/conta/' + ${conta.id} + '/transferir'}" method="post">
+    <input name="idDestino" placeholder="ID destino" />
+    <input name="valor" placeholder="Valor" />
+    <button type="submit">Transferir</button>
+  </form>
+
+  <a href="/admin/contas">Voltar à lista</a>
+</body>
+</html>
