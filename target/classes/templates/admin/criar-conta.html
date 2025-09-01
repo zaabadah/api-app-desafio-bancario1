@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Criar Conta</title>
+</head>
+<body>
+  <h1>Criar Conta</h1>
+  <form th:action="@{/admin/contas/criar}" method="post" th:object="${conta}">
+    <label>Titular: <input type="text" th:field="*{titular}" /></label><br/>
+    <label>Saldo inicial: <input type="text" th:field="*{saldo}" /></label><br/>
+    <button type="submit">Criar</button>
+  </form>
+  <a href="/admin/contas">Voltar</a>
+</body>
+</html>

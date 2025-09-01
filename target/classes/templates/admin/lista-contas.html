@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Lista de Contas</title>
+</head>
+<body>
+  <h1>Contas</h1>
+  <a href="/admin/contas/criar">Criar nova conta</a>
+  <table border="1">
+    <tr><th>ID</th><th>Titular</th><th>Saldo</th></tr>
+    <tr th:each="conta : ${contas}">
+      <td><a th:href="@{'/conta/' + ${conta.id} + '/painel'}" th:text="${conta.id}"></a></td>
+      <td th:text="${conta.titular}"></td>
+      <td th:text="${conta.saldo}"></td>
+    </tr>
+  </table>
+</body>
+</html>
