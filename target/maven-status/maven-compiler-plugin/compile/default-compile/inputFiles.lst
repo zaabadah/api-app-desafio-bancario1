@@ -6,4 +6,5 @@ C:\SISTEMAS\projeto-bancario-H2\src\main\java\br\com\banco\repository\ContaRepos
 C:\SISTEMAS\projeto-bancario-H2\src\main\java\br\com\banco\ProjetoBancarioApplication.java
 C:\SISTEMAS\projeto-bancario-H2\src\main\java\br\com\banco\controller\AdminController.java
 C:\SISTEMAS\projeto-bancario-H2\src\main\java\br\com\banco\controller\ContaController.java
+C:\SISTEMAS\projeto-bancario-H2\src\main\java\br\com\banco\handler\GlobalExceptionHandler.java
 C:\SISTEMAS\projeto-bancario-H2\src\main\java\br\com\banco\exception\SaldoInsuficienteException.java
